@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Reposición Instántanea</title>
+</head>
+<body>
+
+    <nav>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="loc.html">Lote Óptimo y Costo Total de Compra</a></li>
+        <li><a href="lop.html">Lote Óptimo y Costo Total de Producción</a></li>
+        <li><a href="repoInstantanea.html">Reposición Instántanea</a></li>
+    </nav>
+
+    <h1>Reposición Instántanea</h1>
+    
+    <form action="">
+        <label for="Demanda">Demanda</label>
+        <input type="number" id="Demanda" placeholder="Ingrese su demanda anual" required>
+
+        <label for="Lote">Lote</label>
+        <input type="number" id="Lote" placeholder="Ingrese el tamaño del lote" required>
+        <p>No conoce su lote, calcúlelo <a href="calcularLotes.html">aquí</a></p>
+
+        <label for="Entrega">Tiempo de entrega de un pedido</label>
+        <input type="number" id="Entrega" placeholder="Ingrese el tiempo en días" required>
+
+        <label for="DiasL">Dias que se laboran</label>
+        <input type="number" id="DiasL" placeholder="Ingrese los dias laborales">
+
+        <input type="button" value="Calcular Reposición Instántanea" onclick="repoInstantanea()">
+    </form>
+
+    <div class="resultados">
+        <span id="NumPedidos"></span><br>
+        <span id="Duracion"></span><br>
+        <span id="IS"></span><br>
+        <span id="PR"></span><br>
+    </div>
+    
+</body>
+
+<script src="JS/repoInsta.js"></script>
+</html>
