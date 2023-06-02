@@ -50,6 +50,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    min-height: 91rem;
 }
 
 .contenedor{
@@ -110,3 +111,5 @@ body{
 .contenedor h2{
     line-height: 1;
 }
+
+/*----------------------------------------------FORMULARIOS----------------------------------*/

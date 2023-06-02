@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Reposición Instántanea</title>
 </head>
+
 <body>
 
     <div class="barra">
@@ -25,31 +26,33 @@
         </nav>
     </div>
 
-    <h1>Reposición Instántanea</h1>
-    
-    <form action="">
-        <label for="Demanda">Demanda</label>
-        <input type="number" id="Demanda" placeholder="Ingrese su demanda anual" required>
+    <main class="contenedor">
+        <h1>Reposición Instántanea</h1>
+        
+        <form action="">
+            <label for="Demanda">Demanda</label>
+            <input type="number" id="Demanda" placeholder="Ingrese su demanda anual" required>
 
-        <label for="Lote">Lote</label>
-        <input type="number" id="Lote" placeholder="Ingrese el tamaño del lote" required>
-        <p>No conoce su lote, calcúlelo <a href="calcularLotes.html">aquí</a></p>
+            <label for="Lote">Lote</label>
+            <input type="number" id="Lote" placeholder="Ingrese el tamaño del lote" required>
+            <p>No conoce su lote, calcúlelo <a href="calcularLotes.html">aquí</a></p>
 
-        <label for="Entrega">Tiempo de entrega de un pedido</label>
-        <input type="number" id="Entrega" placeholder="Ingrese el tiempo en días" required>
+            <label for="Entrega">Tiempo de entrega de un pedido</label>
+            <input type="number" id="Entrega" placeholder="Ingrese el tiempo en días" required>
 
-        <label for="DiasL">Dias que se laboran</label>
-        <input type="number" id="DiasL" placeholder="Ingrese los dias laborales">
+            <label for="DiasL">Dias que se laboran</label>
+            <input type="number" id="DiasL" placeholder="Ingrese los dias laborales">
 
-        <input type="button" value="Calcular Reposición Instántanea" onclick="repoInstantanea()">
-    </form>
+            <input type="button" value="Calcular Reposición Instántanea" onclick="repoInstantanea()">
+        </form>
 
-    <div class="resultados">
-        <span id="NumPedidos"></span><br>
-        <span id="Duracion"></span><br>
-        <span id="IS"></span><br>
-        <span id="PR"></span><br>
-    </div>
+        <div class="resultados">
+            <span id="NumPedidos"></span><br>
+            <span id="Duracion"></span><br>
+            <span id="IS"></span><br>
+            <span id="PR"></span><br>
+        </div>
+    </main>
     
 </body>
 
