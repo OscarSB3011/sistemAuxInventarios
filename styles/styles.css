@@ -49,6 +49,7 @@ body{
     background: url(../assets/rrrepeat.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .contenedor{
