@@ -46,12 +46,13 @@ const formulario = document.querySelector("#formulario");
           //  CT = CT.toFixed(2); 
       //  alert(CT);
           
+      document.getElementById("resultados").style.display = "block";//Para hacer que se quite lo oculto a los resultados que se hicieron
 
       let respuestaQ = document.getElementById("respuestaQ");
-      respuestaQ.textContent = "El lote optimo de producción es de : " + Q;
+      respuestaQ.textContent = "El Lote Óptimo de Producción es de: " + Q;
       
       let respuestaCT = document.getElementById("respuestaCT");
-      respuestaCT.textContent = "El costo total es de : " + CT;
+      respuestaCT.textContent = "El Costo Total es de: " + CT;
         
       }
 

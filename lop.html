@@ -25,49 +25,53 @@
         </nav>
     </div>
 
-    <h1>Lote óptimo de producción</h1>
- <!-- Este es el formulario por el que vamos a pedir los datos para hacer los calculos -->
- <main class="contenedor">
-    <form action="" id="formulario">
-        <fieldset>
-            <legend>Llene los campos para calcular el óptimo de producción </legend>
-            <div class="contenedor-campo">
+    <main class="contenedor">
+        <h1 class="principal centro">Lote Óptimo de Producción</h1><!-- Este es el formulario por el que vamos a pedir los datos para hacer los calculos -->
 
-                <div class="campo">
-                    <label for="D">Demanda</label>
-                    <input class="input-text" name="Demanda" id="D" placeholder="Demanda">
+        <form action="" id="formulario" class="formulario">
+            <fieldset>
+                <legend>Llene los campos a continuación para calcular</legend>
+                <div class="contenedor-campo">
+
+                    <div class="campo">
+                        <label for="D">Demanda</label>
+                        <input class="input-text" name="Demanda" id="D" placeholder="Ingrese la demanda">
+                    </div>
+
+                    <div class="campo">
+                        <label for="CP">Costo de hacer un pedido</label>
+                        <input class="input-text"  name="CP" id="CP" placeholder="Ingrese el costo por hacer un pedido">
+                    </div>
+
+                    <div class="campo">
+                        <label for="CH">Costo de mantener una pieza en el inventario</label>
+                        <input class="input-text"  name="CH" id="CH" placeholder="Ingrese el costo por mantener una pieza en inventario"> 
+                    </div>
+
+                    <div class="campo">
+                        <label for="p">Tasa de producción diaria</label>
+                        <input class="input-text"  name="p" id="p" placeholder="Ingrese el total de piezas que se producen por día">
+                    </div>
+
+                    <div class="campo">
+                        <label for="dl">Días laborales al año</label>
+                        <input class="input-text"  name="dl" id="dl" placeholder="Opcional" > 
+                    </div>                
+
+                    <div class="centro flex">
+                        <button type="submit" class="boton w-sm-100">Calcular</button>
+                    </div>
+                </div><!--Se cierra el div del contenedor-campo-->
+                
+                <div id="resultados">
+                    <span id="respuestaQ" class="span"></span><br>
+                    <span id="respuestaCT" class="span"></span>
                 </div>
 
-                <div class="campo">
-                    <label for="CP">Costo de hacer un pedido</label>
-                    <input class="input-text"  name="CP" id="CP" placeholder="Costo de pedido">
-                </div>
-
-                <div class="campo">
-                    <label for="CH">Costo de mantener una pieza en el inventario</label>
-                    <input class="input-text"  name="CH" id="CH" placeholder="Costo de una pieza en inventario"> 
-                </div>
-
-                <div class="campo">
-                    <label for="p">Ingrese taza de producción diaria</label>
-                    <input class="input-text"  name="p" id="p" placeholder="Producción Diaria"> 
-                </div>
-
-                <div class="campo">
-                    <label for="dl">Días laborales al año</label>
-                    <input class="input-text"  name="dl" id="dl" placeholder="Opcional" > 
-                </div>                
-
-                <div>
-                    <button type="submit" class="botom w-sm-100">Enviar</button>
-                </div>
-            </div><!--Se cierra el div del contenedor-campo-->
+            </fieldset>
+        </form>
             
-        </fieldset>
-    </form>
-           <h3 id="respuestaQ"></h3>
-           <h3 id="respuestaCT"></h3>
-           
+    </main>      
 <script src="JS/funcionesLop.js"></script> <!--Lo colocamos aqui, debido que al colocarlo en otro lado marca error-->
 </body>
 </html>
