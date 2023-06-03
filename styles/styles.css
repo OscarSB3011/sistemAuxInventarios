@@ -3,8 +3,10 @@
     --fuenteHeading: 'Geologica', sans-serif;
     --fuenteParrafos: 'Poppins', sans-serif;
     --color1: #6e2f74;
-    --gris: #E1E1E1;
+    --color2: #f4b857;
     --color3: #eee9e9;
+    --color4: #F58528;
+    --color5: rgb(200,200,200);
     --blanco: #FFFFFF;
     --negro: #000000;
 }
@@ -49,8 +51,15 @@ body{
     background: url(../assets/rrrepeat.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
-    min-height: 91rem;
+    background-position: center bottom;
+    min-height: 60rem;
+}
+
+@media (min-width: 768px) {
+    body{
+        background-position: center center;
+        min-height: 91rem;
+    }
 }
 
 .contenedor{
@@ -60,6 +69,7 @@ body{
 }
 .centro{
     text-align: center;
+    justify-content: center;
 }
 .principal{
     font-style: bold;
@@ -101,10 +111,18 @@ body{
         align-items: center;
         margin-right: 2rem;
     }
-    .navegacion a:hover{
+    /*.navegacion a:hover{
         color: var(--blanco);
         background: var(--color1);
         border-radius: 50px;
+    }*/
+    .barra :hover a{
+        color: var(--color5);
+    }
+    .barra:hover a:hover{
+        background: none;
+        color: var(--color1);
+        font-weight: bold;
     }
 }
 
@@ -113,3 +131,104 @@ body{
 }
 
 /*----------------------------------------------FORMULARIOS----------------------------------*/
+.formulario{
+    background: rgba(200, 200, 200, 0.8);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--color1);
+}
+
+/*CAMPOS DEL FORMULARIO*/
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        /*grid-template-columns: repeat(2, 1fr);*/
+        grid-template-rows: auto;
+        column-gap: 1rem;
+    }
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--color1);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.input-text{
+    width: 100%;
+    border-style: none;
+    border-radius: 5rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+/*------------------------BOTÓN----------------------*/
+.boton{
+    background-color: var(--color1);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
+    border-style: none;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
+
+.w-sm-100{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100{
+        width: auto;
+    }
+}
+
+.flex{
+    display: flex;
+}
+
+#resultados{
+    display: none;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.span{
+    font-size: 2rem;
+    font-weight: bold;
+}
