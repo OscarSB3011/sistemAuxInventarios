@@ -27,33 +27,49 @@
     </div>
 
     <main class="contenedor">
-        <h1>Reposición Instántanea</h1>
+        <h1 class="principal centro">Reposición Instántanea</h1>
         
-        <form action="">
-            <label for="Demanda">Demanda</label>
-            <input type="number" id="Demanda" placeholder="Ingrese su demanda anual" required>
+        <form action="" class="formulario">
+            <fieldset>
+                <legend>Llene los campos a continuación para calcular</legend>
+                <div class="contenedor-campo">
 
-            <label for="Lote">Lote</label>
-            <input type="number" id="Lote" placeholder="Ingrese el tamaño del lote" required>
-            <p>No conoce su lote, calcúlelo <a href="calcularLotes.html">aquí</a></p>
+                    <div class="campo">
+                        <label for="Demanda">Demanda</label>
+                        <input type="number" class="input-text" id="Demanda" placeholder="Ingrese su demanda anual" required>
+                    </div>
 
-            <label for="Entrega">Tiempo de entrega de un pedido</label>
-            <input type="number" id="Entrega" placeholder="Ingrese el tiempo en días" required>
+                    <div class="campo">
+                        <label for="Lote">Lote</label>
+                        <input type="number" class="input-text" id="Lote" placeholder="Ingrese el tamaño del lote" required>
+                        <p class="input-parrafo">No conoce su lote, calcúlelo <a href="calcularLotes.html">aquí</a></p>
+                    </div>
 
-            <label for="DiasL">Dias que se laboran</label>
-            <input type="number" id="DiasL" placeholder="Ingrese los dias laborales">
+                    <div class="campo">
+                        <label for="Entrega">Tiempo de entrega de un pedido</label>
+                        <input type="number" class="input-text" id="Entrega" placeholder="Ingrese el tiempo en días" required>
+                    </div>
 
-            <input type="button" value="Calcular Reposición Instántanea" onclick="repoInstantanea()">
+                    <div class="campo">
+                        <label for="DiasL">Dias que se laboran</label>
+                        <input type="number" class="input-text" id="DiasL" placeholder="Ingrese los dias laborales">
+                    </div>
+
+                    <div class="centro flex">
+                        <input type="button" class="boton w-sm-100" value="Calcular Reposición Instántanea" onclick="repoInstantanea()">
+                    </div>
+                </div><!--Se cierra el div del contenedor-campo-->
+
+                <div id="resultados">
+                    <span id="NumPedidos" class="span"></span><br>
+                    <span id="Duracion" class="span"></span><br>
+                    <span id="IS" class="span"></span><br>
+                    <span id="PR" class="span"></span><br>
+                </div>
+
+            </fieldset>
         </form>
-
-        <div class="resultados">
-            <span id="NumPedidos"></span><br>
-            <span id="Duracion"></span><br>
-            <span id="IS"></span><br>
-            <span id="PR"></span><br>
-        </div>
     </main>
-    
 </body>
 
 <script src="JS/repoInsta.js"></script>

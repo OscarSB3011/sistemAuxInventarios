@@ -43,6 +43,8 @@ function repoInstantanea(){
     console.log(invSeguridad);
     console.log(PR);
 
+    document.getElementById("resultados").style.display = "block";//Para hacer que se quite lo oculto a los resultados que se hicieron
+
     document.getElementById("NumPedidos").innerHTML = "Número de pedidos "+Math.round(calculo1);
     document.getElementById("Duracion").innerHTML = "Un pedido puede durar "+ Math.round(laboran) +" días";
     document.getElementById("IS").innerHTML = "El inventario de seguridad es: "+ Math.round(invSeguridad);
