@@ -90,7 +90,9 @@ body{
     background: var(--color1);
     color: var(--blanco);
 }
-
+.pagina{
+    font-weight: bold;
+}
 @media (min-width: 768px) {
     .barra{
         display: flex;
@@ -111,18 +113,14 @@ body{
         align-items: center;
         margin-right: 2rem;
     }
-    /*.navegacion a:hover{
-        color: var(--blanco);
-        background: var(--color1);
-        border-radius: 50px;
-    }*/
     .barra :hover a{
         color: var(--color5);
     }
-    .barra:hover a:hover{
+    .navegacion:hover a:hover{
         background: none;
         color: var(--color1);
         font-weight: bold;
+        transform: scale(1.1);
     }
 }
 
@@ -209,6 +207,8 @@ body{
 
 .boton:hover{
     cursor: pointer;
+    background-color: var(--blanco);
+    color: var(--color1);
 }
 
 @media (min-width: 768px) {
