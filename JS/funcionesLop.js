@@ -18,8 +18,60 @@ const formulario = document.querySelector("#formulario");
         let dl = document.querySelector("#dl").value;
         let d;
 
+        if( D === '' || CP === '' || CH === '' || p === ''){
+          
+      
+          swal.fire({
+            title: 'Por favor, llene todos los campos obligatorios',
+            icon:'warning'
+          });
+      
+          return;
+          }
 
-            if (dl===''){
+          if( D == 0 ){
+            swal.fire({
+              title: 'Demanda',
+              text: 'La demanda no puede ser 0',
+              icon:'warning',
+              footer:'Revise sus datos e intente de nuevo',
+            });
+            return;
+          }
+          
+          if( CP == 0 ){
+            swal.fire({
+              title: 'Costo de hacer un pedido',
+              text: 'CP no puede ser 0',
+              icon:'warning',
+              footer:'Revise sus datos e intente de nuevo',
+            });
+            return;
+          }
+
+          
+          if( CH == 0 ){
+            swal.fire({
+              title: 'Costo de mantener una pieza en el inventario',
+              text: ' CH no puede ser 0 ',
+              icon:'warning',
+              footer:'Revise sus datos e intente de nuevo',
+            });
+            return;
+          }
+
+          if( p == 0 ){
+            swal.fire({
+              title: 'Tasa de producción diaria',
+              text: ' La producción no puede ser 0 ',
+              icon:'warning',
+              footer:'Revise sus datos e intente de nuevo',
+            });
+            return;
+          }
+         
+  
+            if (dl==='' || dl == 0){
                 dl= 360;
                 d=D/dl;
                 
@@ -31,8 +83,25 @@ const formulario = document.querySelector("#formulario");
               d= Math.round(d);
               console.log(d);                            
             }
-          
-    
+
+          if (dl < 300){
+  
+          swal.fire({
+            title: 'Dias laborales al año',
+            text:'Este campo no debe tener menos de 300 días',
+            icon:'info'
+          });
+        return;
+        }
+          if (dl > 365){
+  
+          swal.fire({
+            title: 'Dias laborales al año',
+            text:'Este campo no debe rebasar los 365 días',
+            icon:'info'
+          });
+        return;
+        }
 
           //  d=(D/dl);
           Q= Math.sqrt ( Math.round((2 *D *CP)/ CH *(p/(p-d)))); // lOTE OPTIMO DE PRODUCCIÓN 
@@ -55,6 +124,3 @@ const formulario = document.querySelector("#formulario");
       respuestaCT.textContent = "El Costo Total es de: " + CT;
         
       }
-
-   
-      

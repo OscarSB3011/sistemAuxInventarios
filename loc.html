@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,7 @@
             <a href="loc.html" class="pagina">Lote Óptimo y Costo Total de Compra</a>
             <a href="lop.html">Lote Óptimo y Costo Total de Producción</a>
             <a href="repoInstantanea.html">Reposición Instántanea</a>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         </nav>
     </div>
 
@@ -40,12 +41,12 @@
 
                     <div class="campo">
                         <label for="CP">Costo de hacer un pedido</label>
-                        <input type="number" class="input-text"  name="CP" id="CP" placeholder="Ingrese el costo por hacer un pedido">
+                        <input type="number" step="0.01" class="input-text"  name="CP" id="CP" placeholder="Ingrese el costo por hacer un pedido"><!--En el otro archivo no tiene el numeber del type-->
                     </div>
 
                     <div class="campo">
                         <label for="CH">Costo de mantener una pieza en el inventario</label>
-                        <input type="number" class="input-text"  name="CH" id="CH" placeholder="Ingrese el costo por mantener una pieza en inventario"> 
+                        <input type="number" step="0.01" class="input-text"  name="CH" id="CH" placeholder="Ingrese el costo por mantener una pieza en inventario"><!--En el otro archivo no tiene el numeber del type-->
                     </div>
 
                     <div class="centro flex">
@@ -62,5 +63,6 @@
     </main>
         
 <script src="JS/funcionesloc.js"></script> <!--Lo colocamos aqui, debido que al colocarlo en otro lado marca error-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

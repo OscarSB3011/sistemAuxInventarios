@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,12 +40,12 @@
 
                     <div class="campo">
                         <label for="CP">Costo de hacer un pedido</label>
-                        <input class="input-text" type="number"  name="CP" id="CP" placeholder="Ingrese el costo por hacer un pedido">
+                        <input class="input-text" type="number" step="0.01" name="CP" id="CP" placeholder="Ingrese el costo por hacer un pedido">
                     </div>
 
                     <div class="campo">
                         <label for="CH">Costo de mantener una pieza en el inventario</label>
-                        <input class="input-text" type="number"  name="CH" id="CH" placeholder="Ingrese el costo por mantener una pieza en inventario"> 
+                        <input class="input-text" type="number" step="0.01"  name="CH" id="CH" placeholder="Ingrese el costo por mantener una pieza en inventario"> <!--En el otro archivo no tiene el numeber del type-->
                     </div>
 
                     <div class="campo">
@@ -73,5 +73,6 @@
             
     </main>      
 <script src="JS/funcionesLop.js"></script> <!--Lo colocamos aqui, debido que al colocarlo en otro lado marca error-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

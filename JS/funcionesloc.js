@@ -13,28 +13,46 @@ const formulario = document.querySelector("#formulario");
        
         const CH = document.querySelector("#CH").value;
 
-       /*  const p = document.querySelector("#p").value;
-       
-        let dl = document.querySelector("#dl").value;
-        let d;
-
-
-            if (dl===''){
-                dl= 360;
-                d=D/dl;
-                
-                d= Math.round(d);
-                console.log(d);
-            }
-            else{
-              d = D / dl;
-              d= Math.round(d);
-              console.log(d);                            
-            } */
+        if( D === '' || CP === '' || CH === ''){
           
-    
+          swal.fire({
+            title: 'Por favor, llene todos los campos obligatorios',
+            icon:'warning'
+          });
+          return;
+          }
 
-          //  d=(D/dl);
+          if( D == 0 ){
+            swal.fire({
+              title: 'Demanda',
+              text: 'La demanda no puede ser 0',
+              icon:'warning',
+              footer:'Revise sus datos e intente de nuevo',
+            });
+            return;
+          }
+          
+          if( CP == 0 ){
+            swal.fire({
+              title: 'Costo de hacer un pedido',
+              text: 'CP no puede ser 0',
+              icon:'warning',
+              footer:'Revise sus datos e intente de nuevo',
+            });
+            return;
+          }
+
+          
+          if( CH == 0 ){
+            swal.fire({
+              title: 'Costo de mantener una pieza en el inventario',
+              text: ' CH no puede ser 0 ',
+              icon:'warning',
+              footer:'Revise sus datos e intente de nuevo',
+            });
+            return;
+          }
+
           Q= Math.sqrt ( Math.round((2 *D *CP)/ CH )); // lOTE OPTIMO DE PRODUCCIÓN 
           //  Math.round(Q);
           Q = Math.floor(Q);
